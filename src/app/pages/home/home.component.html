@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h1>Modular Irrigation - Dashboard</h1>
+
+<div class="content">
+  <div class="info">
+    <p>Device: <strong id="device">{{device}}</strong></p>
+    <p>Created At: <strong id="created-at">{{createdAt}}</strong></p>
+  </div>
+
+  <div class="icons">
+    <app-data-card title="Huminity" srcIcon="./assets/drip.png" [value]="valueHuminity" altIcon="A drip icon" hexBgColor="#93D8D7"></app-data-card>
+    <app-data-card title="Temperature" srcIcon="./assets/thermometer.png" [value]="valueTemperature" altIcon="A drip icon"  hexBgColor="#93D8A6"></app-data-card>
+    <app-data-card title="Luminocity" srcIcon="./assets/sun.png" [value]="valueLuminocity" altIcon="A drip icon" hexBgColor="#D2D893"></app-data-card>
+  </div>
+</div>
