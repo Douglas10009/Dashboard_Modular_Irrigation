@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { dataResult } from '../models/dataResult';
-import { map } from 'rxjs';
+import { dataResults } from '../models/dataResult';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,17 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
 
-  getDataByID(id:number){
-    return this.http.get<dataResult>(this.apiURL + id +"/")
+  getData(): Observable<dataResults[]>{
+    return this.http.get<dataResults[]>(this.apiURL)
+    .pipe(
+      map((response)=> {
+        return response;
+      })
+    )
+  }
+
+  getDataByID(id:number): Observable<dataResults>{
+    return this.http.get<dataResults>(this.apiURL + id +"/")
     .pipe(
       map((response)=> {
         return response;
