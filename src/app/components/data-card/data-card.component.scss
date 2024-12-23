@@ -1,11 +1,11 @@
-.wrapper {
+.wrapper-data-card {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
 
   width: 300px;
   height: 100px;
-  margin: 10px;
+  margin: -0.5rem;
 
   position: relative;
 
@@ -32,27 +32,30 @@
     margin: auto;
 
     img {
-      width:30px;
+      width: 30px;
     }
   }
 
-  .content-wrapper {
+  .content-wrapper-data-card {
+    display: flex;
     background-color: #cccccc;
     border-radius: 10px;
-
-    width: 100%;
-    min-width: 10%;
+    min-width: 58%;
+    max-width: 60%;
     min-height: 20%;
-    padding: 20px;
-    padding-left: 110px;
+    max-height: 55%;
+    padding: 5%;
+    justify-content: space-evenly;
+    padding-left: 18%;
+    padding-right: 2%;
 
-    .title{
-      font-size: 20px;
+    .title {
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
-    .value{
-      font-size: 25px;
+    .value {
+      font-size: 1.75rem;
       font-weight: lighter;
     }
   }
