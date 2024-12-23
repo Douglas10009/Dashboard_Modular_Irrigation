@@ -1,19 +1,10 @@
 <h1>Modular Irrigation - Dashboard</h1>
 
 <div class="content">
-  <div class="info">
-    <p>Device: <strong id="device">{{device}}</strong></p>
-    <p>Created At: <strong id="created-at">{{createdAt}}</strong></p>
-    <button (click)="sendSMS()" type="button" href="sms:99999999?body=Oi">Send SMS</button>
-  </div>
-
-  <div class="icons">
-    <app-data-card title="Huminity" srcIcon="./assets/drip.png" [value]="valueHuminity" altIcon="A drip icon" hexBgColor="#93D8D7"></app-data-card>
-    <app-data-card title="Temperature" srcIcon="./assets/thermometer.png" [value]="valueTemperature" altIcon="A thermometer icon"  hexBgColor="#93D8A6"></app-data-card>
-    <app-data-card title="Luminocity" srcIcon="./assets/sun.png" [value]="valueLuminocity" altIcon="A sun icon" hexBgColor="#D2D893"></app-data-card>
-    <app-data-card title="Battery Charge" srcIcon="./assets/full-battery.png" [value]="valueBatteryCharge" altIcon="A battery charged icon" hexBgColor="#a0d893"></app-data-card>
-    <app-data-card title="Is Charging?" srcIcon="./assets/battery-charging.png" [value]="isBatteryCharging" altIcon="A battery charging icon" hexBgColor="#d8aa93"></app-data-card>
-  </div>
+  <!-- Colocar para ele receber esses dados dinamicamente através do ngfor e excluir os dispositivos repetidos -->
+  <app-system-card [device]="deviceNumber1"></app-system-card>
+  <app-system-card [device]="deviceNumber2"></app-system-card>
+  <app-system-card [device]="deviceNumber3"></app-system-card>
 </div>
 
 <a href="https://www.freepik.com/icon/sun_9477735#fromView=search&page=1&position=36&uuid=886da7a4-3e9b-4506-964c-bd7c36d697db">Icon by Freepik</a>
