@@ -18,6 +18,11 @@ export class HomeComponent {
   valueHuminity!: string;
   valueTemperature!: string;
   valueLuminocity!: string;
+  valueBatteryCharge!: string;
+  statusBattery!: number;
+  isBatteryCharging!: string;
+
+
 
   constructor(private dataService: DataService) { }
 
@@ -31,6 +36,18 @@ export class HomeComponent {
       this.valueHuminity = data[lastIndex].umidade;
       this.valueTemperature = data[lastIndex].temperatura;
       this.valueLuminocity = data[lastIndex].luminosidade;
+      this.valueBatteryCharge = data[lastIndex].cargaBateria + "%";
+      this.statusBattery = parseInt(data[lastIndex].statusBateria);
+
+      if (this.statusBattery == 1) {
+        this.isBatteryCharging = "Charging";
+      } else if (this.statusBattery == 0) {
+        this.isBatteryCharging = "Not Charging";
+      }
     })
+  }
+
+  sendSMS(){
+    console.log("SMS enviado");
   }
 }
