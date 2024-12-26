@@ -3,8 +3,7 @@
     <p>ID: <strong id="id">{{id}}</strong></p>
     <p>Device: <strong id="device">{{device}}</strong></p>
     <p>Created At: <strong id="created-at">{{createdAt}}</strong></p>
-    <button (click)="sendSMS()" type="button">Send SMS</button>
-    <a href="sms:99999999?body=Oi">Send SMS 2</a>
+    <a href="sms:99999999?body=Oi" (click)="sendSMS()">Send SMS</a>
   </div>
 
   <div class="icons">
