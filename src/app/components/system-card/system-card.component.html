@@ -4,6 +4,11 @@
     <p>Device: <strong id="device">{{device}}</strong></p>
     <p>Created At: <strong id="created-at">{{createdAt}}</strong></p>
     <a href="sms:99999999?body=Oi" (click)="sendSMS()">Send SMS</a>
+
+    <div class="useIAButton">
+      <input type="checkbox" name="useAI" id="useAI" (click)="useAI()" [checked]="usingAI" class="useAI"><label
+        for="useAI" class="useAI">Use AI control</label>
+    </div>
   </div>
 
   <div class="icons">

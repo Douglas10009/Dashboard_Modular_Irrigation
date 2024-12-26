@@ -12,6 +12,16 @@
 .info {
   font-size: 1.3rem;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  .useIAButton {
+    width: 100%;
+    height: 1rem;
+    margin: 0.5rem;
+  }
 }
 
 .icons {

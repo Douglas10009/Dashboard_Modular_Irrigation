@@ -13,6 +13,8 @@ import { DataCardComponent } from '../data-card/data-card.component';
 export class SystemCardComponent {
   data!: dataResults[];
 
+  usingAI:boolean = false;
+
   @Input() device!: string;
   apiDevice!: string;
 
@@ -53,6 +55,10 @@ export class SystemCardComponent {
   // TODO: Implemntar a função de enviar SMS
   sendSMS() {
     console.log('SMS enviado');
+  }
+
+  useAI(){
+    this.usingAI = !this.usingAI;
   }
 
   async parseStatusBattery() {
