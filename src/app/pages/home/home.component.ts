@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { DataCardComponent } from '../../components/data-card/data-card.component';
-import { DataService } from '../../services/data.service';
-import { dataResults } from '../../models/dataResult';
 import { SystemCardComponent } from '../../components/system-card/system-card.component';
+import { PopupComponent } from '../../components/popup/popup.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SystemCardComponent],
+  imports: [SystemCardComponent, PopupComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
