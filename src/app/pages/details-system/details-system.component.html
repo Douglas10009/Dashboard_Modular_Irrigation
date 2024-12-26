@@ -2,7 +2,16 @@
 <h2>Device: {{device}}</h2>
 
 <div class="content">
-  <div class="info">
-    
+  <div class="cards">
+    <app-data-card title="Huminity" srcIcon="./assets/drip.png" [value]="valueHuminity" altIcon="A drip icon"
+      hexBgColor="#93D8D7"></app-data-card>
+    <app-data-card title="Temperature" srcIcon="./assets/thermometer.png" [value]="valueTemperature"
+      altIcon="A thermometer icon" hexBgColor="#93D8A6"></app-data-card>
+    <app-data-card title="Luminocity" srcIcon="./assets/sun.png" [value]="valueLuminocity" altIcon="A sun icon"
+      hexBgColor="#D2D893"></app-data-card>
+    <app-data-card title="Battery Charge" srcIcon="./assets/full-battery.png" [value]="valueBatteryCharge"
+      altIcon="A battery charged icon" hexBgColor="#a0d893"></app-data-card>
+    <app-data-card title="Is Charging?" srcIcon="./assets/battery-charging.png" [value]="isBatteryCharging"
+      altIcon="A battery charging icon" hexBgColor="#d8aa93"></app-data-card>
   </div>
 </div>
