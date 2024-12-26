@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { dataResults } from '../../models/dataResult';
 import { DataService } from '../../services/data.service';
 import { DataCardComponent } from '../data-card/data-card.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-system-card',
@@ -27,7 +28,7 @@ export class SystemCardComponent {
   statusBattery!: number;
   isBatteryCharging!: string;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private router:Router) {}
 
   ngOnInit() {
     this.dataService.getData().subscribe((data) => {
@@ -59,6 +60,11 @@ export class SystemCardComponent {
 
   useAI(){
     this.usingAI = !this.usingAI;
+  }
+
+  goToDetails(device: string) {
+    alert('Go to details' + device);
+    this.router.navigate(['/details', device]);
   }
 
   async parseStatusBattery() {
