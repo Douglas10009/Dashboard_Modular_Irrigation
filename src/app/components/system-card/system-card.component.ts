@@ -17,7 +17,7 @@ export class SystemCardComponent {
   usingAI:boolean = false;
 
   @Input() device!: string;
-  apiDevice!: string;
+  @Input() cellphoneNumber!: string;
 
   id!: number;
   createdAt!: string;
