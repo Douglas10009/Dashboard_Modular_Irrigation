@@ -19,6 +19,8 @@ export class SystemCardComponent {
   @Input() device!: string;
   @Input() cellphoneNumber!: string;
 
+  sendSMSurl: string = '';
+
   id!: number;
   createdAt!: string;
   valueHuminity!: string;
@@ -46,8 +48,11 @@ export class SystemCardComponent {
           this.valueTemperature = eachData.temperatura;
           this.valueLuminocity = eachData.luminosidade;
           this.valueBatteryCharge = eachData.cargaBateria + '%';
+
           this.statusBattery = parseInt(eachData.statusBateria);
           this.parseStatusBattery();
+          
+          this.sendSMSurl = `sms:${this.cellphoneNumber}?body=Oi`
         }
       });
     });
