@@ -1,3 +1,3 @@
 export const environment = {
-  apiURL:"http://177.87.94.245:3000/api/dados/"
+  apiURL:"http://162.243.117.152:3000/api/dados"
 };
