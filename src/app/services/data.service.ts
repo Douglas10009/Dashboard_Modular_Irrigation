@@ -8,12 +8,12 @@ import { map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  apiURL:string = environment.apiURL;
+  dataApiURL:string = environment.dataApiURL;
 
   constructor(private http:HttpClient) { }
 
   getData(): Observable<dataResults[]>{
-    return this.http.get<dataResults[]>(this.apiURL)
+    return this.http.get<dataResults[]>(this.dataApiURL)
     .pipe(
       map((response)=> {
         return response;
@@ -22,7 +22,7 @@ export class DataService {
   }
 
   getDataByID(id:number): Observable<dataResults>{
-    return this.http.get<dataResults>(this.apiURL + id +"/")
+    return this.http.get<dataResults>(this.dataApiURL + id +"/")
     .pipe(
       map((response)=> {
         return response;
